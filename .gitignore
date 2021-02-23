@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules/
+
+# Database account data
+.env
+
+# Local history ommitting
+.history/
