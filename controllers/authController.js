@@ -62,7 +62,7 @@ const signup_post = async (req, res) => {
         res.status(201).json({ user: user._id });
     }
     catch(err) {
-        const errors = handleErrorsSignup(err);
+        const errors = errorHandlerSignup(err);
         res.status(400).json({ errors });
     }
 }
@@ -78,7 +78,7 @@ const login_post = async (req, res) => {
         res.status(200).json({ id: user._id, login: user.login, token: token });
     }
     catch(err) {
-        const errors = handleErrorsSignup(err);
+        const errors = errorHandlerLogin(err);
         res.status(400).json({ errors });
     }
 };
