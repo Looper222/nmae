@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter a password'],
         validate: [isStrongPassword, 'Please enter strong password']
+    },
+    posts: {
+        type: Array
     }
 });
 
